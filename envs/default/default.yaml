@@ -12,4 +12,11 @@ spec:
     directory: 
       recurse: true
     path: envs/default
-    repoURL:
+    targetRevision: main
+    repoURL: https://github.com/jeanmarcmoeckel/argo-test
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - Createnamespace=true
